@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vẽ hình học cơ bản</title>
+    <style>
+        canvas {
+        border: 1px solid black;
+    }
+    </style>
+    
+</head>
+<body>
+    <canvas id="drawingCanvas" width="500" height="500"></canvas>
+<script>
+    const ctx = document.getElementById('drawingCanvas').getContext('2d');
+ctx.fillStyle = "#00FF00"; // màu xanh lá
+ctx.fillRect(50, 50, 200, 100); // Vẽ hcn
+
+
+</script>
+
+</body>
+</html>

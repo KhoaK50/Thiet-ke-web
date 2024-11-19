@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo đồ họa theo tương tác</title>
+    <style>
+        canvas {
+        border: 1px solid black;
+    }
+    </style>
+    
+</head>
+<body>
+    <canvas id="drawingCanvas" width="500" height="500"></canvas>
+<script>
+    const canvas = document.getElementById('drawingCanvas');
+    const ctx = canvas.getContext('2d');
+    let color = "blue"; // Màu mặc định
+
+document.addEventListener("keydown", function(e) {
+    if (e.key === "r") {
+        color = "red";  // Thay đổi màu thành đỏ khi nhấn phím 'r'
+    } else if (e.key === "g") {
+        color = "green";  // Thay đổi màu thành xanh khi nhấn phím 'g'
+    }
+});
+
+canvas.addEventListener("click", function(e) {
+    const x = e.clientX;
+    const y = e.clientY;
+    ctx.fillStyle = color;  // Sử dụng màu đã chọn
+    ctx.fillRect(x, y, 20, 20);  // Vẽ hình vuông tại điểm click
+});
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

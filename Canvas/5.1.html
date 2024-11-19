@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tương tác với chuột</title>
+    <style>
+        canvas {
+        border: 1px solid black;
+    }
+    </style>
+    
+</head>
+<body>
+    <canvas id="drawingCanvas" width="500" height="500"></canvas>
+<script>
+    const canvas = document.getElementById('drawingCanvas'); // Lấy đối tượng canvas
+    const ctx = canvas.getContext('2d'); // Lấy context để vẽ lên canvas
+    canvas.addEventListener("click", function(e) {
+    const x = e.clientX;  // Lấy tọa độ X của vị trí click
+    const y = e.clientY;  // Lấy tọa độ Y của vị trí click
+    ctx.fillRect(x, y, 20, 20);  // Vẽ một hình vuông nhỏ tại điểm click
+});
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

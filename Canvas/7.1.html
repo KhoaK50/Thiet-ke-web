@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vẽ nhiều đối tượng với Canvas</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="500" height="500"></canvas>
+
+<script>
+    // Lấy đối tượng canvas và context để vẽ
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+
+    ctx.beginPath(); // Bắt đầu một đường vẽ mới (tạo ra một đường vẽ mới không bị ảnh hưởng bởi các đường vẽ trước đó)
+ctx.moveTo(50, 50); // Di chuyển bút vẽ đến điểm (50, 50) mà không vẽ gì
+ctx.lineTo(200, 50); // Vẽ một đường thẳng từ điểm hiện tại (50, 50) đến (200, 50)
+ctx.lineTo(200, 200); // Tiếp tục vẽ từ điểm (200, 50) đến (200, 200)
+ctx.closePath(); // Đóng hình (vẽ một đường thẳng nối điểm cuối cùng về điểm bắt đầu)
+ctx.fill(); // Điền màu vào hình (mặc định là màu đen)
+
+</script>
+
+</body>
+</html>

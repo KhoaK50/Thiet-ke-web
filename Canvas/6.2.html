@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixi.js Circle Animation</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+
+<!-- Tải Pixi.js từ CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.3/pixi.min.js"></script>
+
+<script>
+    // Tạo một ứng dụng Pixi.js
+    let app = new PIXI.Application({ width: 800, height: 600 });
+    document.body.appendChild(app.view);
+
+    // Tạo một đối tượng hình tròn và thêm vào sân khấu
+    let circle = new PIXI.Graphics();
+    circle.beginFill(0xFF0000);  // Màu đỏ
+    circle.drawCircle(0, 0, 50); // Vẽ một hình tròn với bán kính 50
+    circle.endFill();
+    circle.x = app.view.width / 2;  // Đặt hình tròn vào giữa màn hình theo chiều ngang
+    circle.y = app.view.height / 2; // Đặt hình tròn vào giữa màn hình theo chiều dọc
+    app.stage.addChild(circle);  // Thêm hình tròn vào sân khấu (stage)
+
+    // Biến theo dõi thời gian trôi qua để di chuyển hình tròn
+    let time = 0;
+
+    // Di chuyển và quay hình tròn
+    app.ticker.add(function(delta) {
+        // Cập nhật thời gian trôi qua
+        time += delta;
+
+        // Xoay hình tròn theo mỗi khung hình
+        circle.rotation += 0.01 * delta;  // delta giúp đồng bộ hóa chuyển động với tốc độ khung hình
+
+        // Di chuyển hình tròn theo một vòng tròn
+        let radius = 150;  // Bán kính của quỹ đạo
+        let speed = 0.01;   // Tốc độ di chuyển
+        circle.x = app.view.width / 2 + Math.cos(time * speed) * radius;  // Tính toán vị trí X
+        circle.y = app.view.height / 2 + Math.sin(time * speed) * radius;  // Tính toán vị trí Y
+    });
+</script>
+
+</body>
+</html>

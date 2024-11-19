@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        canvas {
+        border: 1px solid black;
+    }
+    </style>
+    
+</head>
+<body>
+    <canvas id="drawingCanvas" width="500" height="500"></canvas>
+<script>
+    const canvas = document.getElementById('drawingCanvas'); // Lấy đối tượng canvas
+    const ctx = canvas.getContext('2d'); // Lấy context để vẽ lên canvas
+    let x = 0;  // Biến để điều khiển vị trí của đối tượng
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Xóa màn hình trước khi vẽ lại
+    ctx.fillRect(x, 50, 50, 50); // Vẽ hình chữ nhật tại vị trí x
+    x += 1;  // Di chuyển hình chữ nhật sang phải
+    requestAnimationFrame(animate); // Gọi lại hàm animate để tạo chuyển động liên tục
+}
+animate();
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

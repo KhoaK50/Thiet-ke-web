@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vẽ văn bản</title>
+    <style>
+        canvas {
+        border: 1px solid black;
+    }
+    </style>
+    
+</head>
+<body>
+    <canvas id="drawingCanvas" width="500" height="500"></canvas>
+<script>
+    const ctx = document.getElementById('drawingCanvas').getContext('2d');
+ctx.font = "24px Arial";
+ctx.fillStyle = "#000"; // Màu đen
+ctx.fillText("Hello Canvas", 100, 50); 
+// Vẽ chữ "Hello Canvas"
+
+
+
+
+</script>
+
+</body>
+</html>
