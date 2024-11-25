@@ -1,0 +1,257 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('phanthiet.webp') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  header h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: fadeInSlide 2s ease-in-out;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    animation: fadeInSlide 2.5s ease-in-out;
+  }
+  
+  header button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: #ff7e5f;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: bounce 2s infinite;
+  }
+  
+  header button:hover {
+    background: #feb47b;
+    transform: scale(1.1);
+  }
+  
+  /* Sticky Navigation */
+  nav {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #feffff;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background: #e0f7fa;
+    color: #004d40;
+  }
+  
+  /* Section */
+  .section {
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section:nth-child(even) {
+    background: #f9f9f9;
+  }
+  
+  .section h2 {
+    font-size: 2.5rem;
+    color: #00796b;
+    margin-bottom: 1rem;
+    position: relative;
+    animation: fadeInUp 1s ease-in-out;
+  }
+
+  
+  .section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #666;
+    animation: fadeInUp 1.2s ease-in-out;
+  }
+  
+  .section img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .section img:hover {
+    transform: scale(0.95);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Footer Styles */
+footer {
+    background: #1a1a2e; /* Nền tối thanh lịch */
+    color: #ffffff;
+    padding: 3rem 1rem;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #ffcc80;
+    text-transform: uppercase;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-column ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #ffcc80;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .social-links a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #ffcc80;
+    transform: scale(1.2);
+  }
+  
+  .footer-bottom p {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+  }
+  
+  
+  
+  /* Animations */
+  @keyframes fadeInSlide {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
