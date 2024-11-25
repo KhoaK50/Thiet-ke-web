@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="trang chủ.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="#" class="brand"><img src="travel.webp" width="150px" height="100px"></a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">Ngôn ngữ</a>
+                <a href="aboutus.html">Anonymouz</a>
+                <a href="wheel.html">Vòng quay</a>
+                <a href="#"><a href="contact.html">Liên hệ</a>
+                <a href="#"><a href="login2.html">Đăng nhập</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <video class="video-slide active" src="dalat.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="phanthiet.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="vungtau.mp4" autoplay muted loop></video>
+        
+        <div class="content active" >
+            <h1>ĐÀ LẠT<br></h1><span><h2>THÀNH PHỐ NGÀN HOA</h2></span>
+            <p>֍ Tọa lạc tại tỉnh Lâm Đồng, trên vùng cao nguyên Lâm Viên, Tây Nguyên, Việt Nam
+                <br>֍ Nổi tiếng với khí hậu ôn hòa, nhiều cảnh đẹp
+                <br>֍ Là xứ sở của hoa quả
+            </p>
+            <a href="tongquandl.html">Tìm hiểu</a></a>
+        </div>
+        <div class="content">
+            <h1>PHAN THIẾT<br></h1><span><h2>THỦ PHỦ "RESORT"</h2></span>
+            <p>֍ Tọa lạc tại tỉnh Bình Thuận - tỉnh ven biển cực nam vùng duyên hải Nam Trung Bộ
+                <br>֍ Nơi phát triển các hoạt động du lịch biển và nông nghiệp đặc trưng
+                <br>֍ Nền ẩm thực mang hương vị "mặn mòi" của biển cả
+            </p>
+            <a href="tongquanpt.html">Tìm hiểu</a>
+        </div>
+        <div class="content">
+            <h1>VŨNG TÀU<br></h1><span><h2>THIÊN ĐƯỜNG DU LỊCH BIỂN</h2></span>
+            <p>֍ Tọa lạc tại tỉnh Bà Rịa Vũng Tàu, vùng Đông Nam Bộ, Việt Nam
+                <br>֍ Nổi tiếng với khí hậu ôn hòa, nhiều cảnh đẹp
+                <br>֍ Là xứ sở của hoa quả
+            </p>
+            <a href="tongquanvt.html">Tìm hiểu</a>
+        </div>
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+        var slideNav = function(manual) {
+            btns.forEach((btn) => {
+                btn.classList.remove("active");
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+
+            contents.forEach((content) => {
+                content.classList.remove("active");
+            });
+            
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn,i) =>{
+            btn.addEventListener("click", () => {
+                slideNav(i);
+            });
+        });
+    </script>
+</body>
+</html>
