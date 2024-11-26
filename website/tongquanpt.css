@@ -41,7 +41,85 @@
   
   header p {
     font-size: 1.2rem;
-    margin5rem;
+    margin-bottom: 2rem;
+    animation: fadeInSlide 2.5s ease-in-out;
+  }
+  
+  header button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: #ff7e5f;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: bounce 2s infinite;
+  }
+  
+  header button:hover {
+    background: #feb47b;
+    transform: scale(1.1);
+  }
+  
+  /* Sticky Navigation */
+  nav {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #feffff;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background: #e0f7fa;
+    color: #004d40;
+  }
+  
+  /* Section */
+  .section {
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section:nth-child(even) {
+    background: #f9f9f9;
+  }
+  
+  .section h2 {
+    font-size: 2.5rem;
+    color: #00796b;
+    margin-bottom: 1rem;
+    position: relative;
+    animation: fadeInUp 1s ease-in-out;
+  }
+
+  
+  .section p {
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     max-width: 700px;
     margin-left: auto;
