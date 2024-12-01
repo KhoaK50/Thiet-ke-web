@@ -176,7 +176,7 @@ button {
                 <div class="remember">
                     <label><input type="checkbox"> Nhớ mật khẩu</label>
                 </div>
-                <button type="submit">Đăng nhập</button>
+                <button type="submit"><a href="trang chủ.html" style="text-decoration:none;">Đăng nhập</a></button>
                 <div class="signUp-link">
                     <p>Bạn chưa có tài khoản? <a href="#" class="signUpBtn-link">Đăng kí</a></p>
                 </div>
@@ -223,22 +223,6 @@ signInBtnLink.addEventListener('click', ()=>{
 });
 
 
-
-
-
-
-function switchLanguage(lang) {
-    const contentVi = document.getElementById('content-vi');
-    const contentEn = document.getElementById('content-en');
-
-    if (lang === 'vi') {
-        contentVi.classList.remove('hidden');
-        contentEn.classList.add('hidden');
-    } else if (lang === 'en') {
-        contentVi.classList.add('hidden');
-        contentEn.classList.remove('hidden');
-    }
-}
     </script>
 </body>
 </html>
