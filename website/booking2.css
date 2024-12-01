@@ -165,9 +165,11 @@ nav {
     transition: 0.5s;
 }
 
-.booking__container input:focus ~ label {
+.booking__container input:focus~label,
+.booking__container input:valid~label {
     font-size: 0.8rem;
     top: 0;
+    
 }
 
 .booking__container .form__group p {
